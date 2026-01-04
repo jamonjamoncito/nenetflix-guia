@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Guía oficial NENETFLIX para Plex: inicio de sesión, configuración y peticiones." />
+  <title>Guía NENETFLIX · Plex</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <a class="skip" href="#inicio">Saltar al contenido</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand" aria-label="NENETFLIX">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">NENETFLIX</span>
+        <span class="brand__sub">Guía Plex</span>
+      </div>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#como-funciona" class="nav__link">Cómo funciona</a>
+        <a href="#instalar" class="nav__link">Dispositivos</a>
+        <a href="#configurar" class="nav__link">Configurar Plex</a>
+        <a href="#reproductor" class="nav__link">Reproductor</a>
+        <a href="#peticiones" class="nav__link nav__cta">Peticiones</a>
+      </nav>
+
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div id="mobileNav" class="mobile" hidden>
+      <a href="#inicio" class="mobile__link">Inicio</a>
+      <a href="#como-funciona" class="mobile__link">Cómo funciona</a>
+      <a href="#instalar" class="mobile__link">Dispositivos</a>
+      <a href="#configurar" class="mobile__link">Configurar Plex</a>
+      <a href="#reproductor" class="mobile__link">Reproductor</a>
+      <a href="#peticiones" class="mobile__link mobile__cta">Peticiones</a>
+    </div>
+  </header>
+
+  <main id="inicio" class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <div class="pill">🔒 Plataforma privada</div>
+        <h1>Tu “Netflix” privado, dentro de Plex.</h1>
+        <p class="lead">
+          Accede a un catálogo inmenso de <b>películas</b>, <b>series</b>, <b>anime</b>, <b>documentales</b> y <b>estrenos</b>.
+          Todo en una sola biblioteca.
+        </p>
+
+        <div class="pricing">
+          <div class="price">
+            <div class="price__big">50 €</div>
+            <div class="price__meta">/ año</div>
+          </div>
+          <div class="pricing__notes">
+            <div>✅ <b>2 pantallas</b> simultáneas</div>
+            <div>✅ Peticiones desde la web</div>
+            <div>✅ Compatible con TV, móvil y PC</div>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#instalar">Empezar en 1 minuto</a>
+          <a class="btn btn--ghost" href="#peticiones">Pedir contenido</a>
+        </div>
+
+        <div class="hint">
+          <span class="hint__k">Importante</span>
+          En móvil, usa <b>navegador</b> (app.plex.tv) para evitar compras dentro de la app.
+        </div>
+      </div>
+
+      <div class="hero__card">
+        <div class="card">
+          <div class="card__title">Checklist rápido</div>
+          <ul class="check">
+            <li>Te daremos usuario y contraseña.</li>
+            <li>En TV, vincula con código en <b>plex.tv/link</b>.</li>
+            <li>Deja solo las secciones NENETFLIX (1–12).</li>
+            <li>Ordena por “Fecha en que se agregó”.</li>
+            <li>Calidad: <b>Original</b> (o Automática si hay cortes).</li>
+          </ul>
+          <div class="card__foot">
+            <a class="mini" href="#faq">¿Problemas? Ver ayuda rápida →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="progress" aria-label="Progreso de la guía">
+        <div class="progress__bar" id="progressBar"></div>
+      </div>
+    </div>
+  </main>
+
+  <section id="como-funciona" class="section">
+    <div class="wrap">
+      <h2>Cómo funciona</h2>
+      <p class="muted">No tienes que registrarte. Solo envíanos tu correo y te creamos la cuenta.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">1</div>
+          <div>
+            <div class="step__title">Nos das tu correo</div>
+            <div class="step__text">Solo necesitamos tu email. Nada más.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__num">2</div>
+          <div>
+            <div class="step__title">Creamos tu cuenta</div>
+            <div class="step__text">La vinculamos a la biblioteca privada de NENETFLIX.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__num">3</div>
+          <div>
+            <div class="step__title">Inicias sesión y listo</div>
+            <div class="step__text">Empieza a ver contenido y pide lo que quieras desde la web.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="instalar" class="section section--alt">
+    <div class="wrap">
+      <h2>Dispositivos</h2>
+      <p class="muted">Elige tu dispositivo y sigue los pasos. Si no sabes cuál, empieza por “TV”.</p>
+
+      <div class="tabs" role="tablist" aria-label="Dispositivos">
+        <button class="tab is-active" role="tab" aria-selected="true" data-tab="tv">📺 TV</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="movil">📱 Móvil</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="pc">💻 PC</button>
+      </div>
+
+      <div class="panels">
+        <div class="panel is-active" data-panel="tv">
+          <div class="grid2">
+            <div>
+              <h3>TV (recomendado)</h3>
+              <ol class="ol">
+                <li>Instala la app <b>PLEX</b> en tu Smart TV.</li>
+                <li>Abre Plex: aparecerá un <b>código</b> en pantalla.</li>
+                <li>En tu móvil/PC entra en <b>plex.tv/link</b>.</li>
+                <li>Escribe el código y confirma.</li>
+              </ol>
+              <div class="callout">
+                <b>Si tu TV no permite instalar apps:</b> usa un <b>Fire TV</b> (Amazon) y descarga Plex.
+              </div>
+            </div>
+            <figure class="shot">
+              <img src="assets/06_plex_link.png" alt="Pantalla plex.tv/link" data-lightbox>
+              <figcaption>Vincula la TV desde plex.tv/link</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="panel" data-panel="movil">
+          <div class="grid2">
+            <div>
+              <h3>Móvil (Android / iPhone)</h3>
+              <ol class="ol">
+                <li>Abre el navegador (Chrome / Safari).</li>
+                <li>Entra en <b>app.plex.tv</b>.</li>
+                <li>Inicia sesión con el correo y contraseña que te damos.</li>
+              </ol>
+              <div class="callout">
+                Recomendado: <b>usar navegador</b> para evitar compras dentro de la app.
+              </div>
+            </div>
+            <figure class="shot">
+              <img src="assets/05_login_email.png" alt="Pantalla de login en Plex" data-lightbox>
+              <figcaption>Login web (app.plex.tv)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="panel" data-panel="pc">
+          <div class="grid2">
+            <div>
+              <h3>PC / Mac</h3>
+              <ol class="ol">
+                <li>Abre cualquier navegador.</li>
+                <li>Entra en <b>app.plex.tv</b>.</li>
+                <li>Inicia sesión y accede a tus secciones NENETFLIX.</li>
+              </ol>
+              <div class="callout">
+                Truco: añade el enlace a favoritos para acceder rápido.
+              </div>
+            </div>
+            <figure class="shot">
+              <img src="assets/05_login_email.png" alt="Pantalla de login en Plex" data-lightbox>
+              <figcaption>Inicio de sesión en web</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h3>Inicio de sesión (rápido)</h3>
+      <div class="grid2">
+        <div class="card2">
+          <div class="card2__title">Web (móvil/PC)</div>
+          <p>Usa el botón de email y entra tus datos.</p>
+          <ul class="miniList">
+            <li>✅ “Continuar con el correo electrónico”</li>
+            <li>✅ Email + contraseña</li>
+          </ul>
+        </div>
+        <div class="card2">
+          <div class="card2__title">TV (vinculación)</div>
+          <p>El móvil se usa para vincular la TV con un código.</p>
+          <ul class="miniList">
+            <li>✅ Código en TV</li>
+            <li>✅ plex.tv/link</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="configurar" class="section">
+    <div class="wrap">
+      <h2>Configurar Plex para NENETFLIX</h2>
+      <p class="muted">Esto se hace 1 vez. Después ya solo entras y ves contenido.</p>
+
+      <div class="grid2">
+        <div class="card3">
+          <h3>1) Deja solo las secciones de NENETFLIX</h3>
+          <p>Quita el contenido de Plex por defecto y deja únicamente nuestras categorías.</p>
+          <details class="details">
+            <summary>Ver lista oficial (1–12)</summary>
+            <div class="details__body">
+              <ol class="ol compact">
+                <li>1 - Películas</li>
+                <li>2 - Películas Animadas</li>
+                <li>3 - Series</li>
+                <li>4 - Series Anime</li>
+                <li>5 - Artes Marciales</li>
+                <li>6 - Documentales</li>
+                <li>7 - Cine Español</li>
+                <li>8 - Series Dibujos</li>
+                <li>9 - Programas TV</li>
+                <li>10 - Clásicos y peticiones</li>
+                <li>11 - Cine Western</li>
+                <li>12 - Películas de tiburones</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+
+        <figure class="shot">
+          <img src="assets/02_menu_lateral.png" alt="Menú lateral de Plex" data-lightbox>
+          <figcaption>Menú lateral: deja solo NENETFLIX</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid2">
+        <div class="card3">
+          <h3>2) Ordena tus bibliotecas por fecha</h3>
+          <p>En cada sección (Películas, Series, Animadas, Clásicos) ve a <b>Biblioteca</b> y selecciona:</p>
+          <div class="callout">
+            <b>Ordenar por:</b> “Fecha en que se agregó”
+          </div>
+        </div>
+
+        <figure class="shot">
+          <img src="assets/03_biblioteca_orden.png" alt="Biblioteca de Plex ordenada por fecha" data-lightbox>
+          <figcaption>Biblioteca → Ordenar por fecha</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid2">
+        <div class="card3">
+          <h3>3) Menú ordenado (ejemplo)</h3>
+          <p>Así debe quedar el menú lateral, con las secciones numeradas y ordenadas.</p>
+        </div>
+
+        <figure class="shot">
+          <img src="assets/01_menu_ordenado.png" alt="Menú ordenado" data-lightbox>
+          <figcaption>Ejemplo de orden correcto</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="reproductor" class="section section--alt">
+    <div class="wrap">
+      <h2>Reproductor: idioma y calidad</h2>
+      <p class="muted">La norma general: <b>Calidad Original</b>. Si hay cortes, pasa a <b>Automática</b>.</p>
+
+      <div class="grid2">
+        <div class="card3">
+          <h3>Ajustes recomendados</h3>
+          <ul class="check">
+            <li><b>Calidad:</b> Original / Máxima</li>
+            <li><b>Audio:</b> Español (si está disponible)</li>
+            <li><b>Subtítulos:</b> opcional</li>
+          </ul>
+          <div class="callout">
+            Si notas buffering, cambia <b>Calidad → Automática</b>.
+          </div>
+        </div>
+
+        <figure class="shot">
+          <img src="assets/04_reproductor_ajustes.png" alt="Ajustes del reproductor en Plex" data-lightbox>
+          <figcaption>Audio / Subtítulos / Calidad</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="peticiones" class="section">
+    <div class="wrap">
+      <h2>Peticiones de películas y series</h2>
+      <p class="muted">Pide lo que quieras: películas, series o anime. Cuando esté disponible, aparecerá en Plex.</p>
+
+      <div class="cta">
+        <div>
+          <div class="cta__title">Abrir la web de peticiones</div>
+          <div class="cta__sub">Inicia sesión, busca y solicita en segundos.</div>
+        </div>
+        <a class="btn btn--primary" href="https://peticiones.nenetflix.uk/" target="_blank" rel="noopener">Ir a peticiones</a>
+      </div>
+
+      <div class="grid2">
+        <div class="card3">
+          <h3>Cómo pedir contenido</h3>
+          <ol class="ol">
+            <li>Entra en <b>peticiones.nenetflix.uk</b></li>
+            <li>Busca la película/serie/anime</li>
+            <li>Pulsa <b>Solicitar</b></li>
+          </ol>
+          <div class="callout">
+            Consejo: pide en cuanto lo veas. Se añade lo antes posible.
+          </div>
+        </div>
+        <div class="card3">
+          <h3>Soporte rápido</h3>
+          <ul class="check">
+            <li>Si la TV no carga: prueba reiniciar la app.</li>
+            <li>Si hay cortes: calidad Automática.</li>
+            <li>Si no ves secciones: revisa el menú lateral.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section section--alt">
+    <div class="wrap">
+      <h2>Ayuda rápida</h2>
+
+      <div class="faq">
+        <details class="details">
+          <summary>No veo las categorías de NENETFLIX</summary>
+          <div class="details__body">
+            En el menú lateral, desactiva lo que trae Plex por defecto y deja solo las secciones numeradas (1–12).
+          </div>
+        </details>
+
+        <details class="details">
+          <summary>Me va a tirones / se corta</summary>
+          <div class="details__body">
+            En el reproductor, cambia <b>Calidad</b> a <b>Automática</b>. Si quieres máxima calidad, usa <b>Original</b> cuando tu conexión lo permita.
+          </div>
+        </details>
+
+        <details class="details">
+          <summary>Mi TV no tiene la app Plex</summary>
+          <div class="details__body">
+            La solución más simple es un <b>Fire TV</b> (Amazon). Instalas Plex ahí y listo.
+          </div>
+        </details>
+
+        <details class="details">
+          <summary>¿Tengo que registrarme?</summary>
+          <div class="details__body">
+            No. Solo nos das tu correo y te creamos la cuenta.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__left">
+        <div class="brand brand--small">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__name">NENETFLIX</span>
+        </div>
+        <div class="footer__muted">Guía oficial · Plex · 50 € / año · 2 pantallas simultáneas</div>
+      </div>
+
+      <div class="footer__right">
+        <a href="#inicio" class="mini">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__content" role="dialog" aria-modal="true" aria-label="Vista ampliada">
+      <button class="lightbox__close" aria-label="Cerrar" data-close>✕</button>
+      <img id="lightboxImg" alt="Imagen ampliada" />
+    </div>
+  </div>
+
+</body>
+</html>
