@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NENETFLIX · Guía</title>
+
+  <meta name="theme-color" content="#0b0b0f" />
+  <meta name="description" content="NENETFLIX: tu streaming privado tipo Netflix en Plex. 50 € al año, 2 pantallas simultáneas y peticiones incluidas." />
+  <meta property="og:title" content="NENETFLIX · Streaming privado en Plex" />
+  <meta property="og:description" content="50 € al año · 2 pantallas simultáneas · Peticiones incluidas · Guía completa para empezar." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/og.jpg" />
+
+  <meta name="description" content="Guía oficial NENETFLIX (Plex). Configura tu cuenta en minutos." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fonts: Inter + Bebas Neue (Netflix-like) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="bg"></div>
+  <div class="grain"></div>
+
+  <!-- Top bar -->
+  <header class="topbar topbar--v5">
+    <button class="hamburger" aria-label="Menú" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="brand">
+      <span class="brand-pill">Plataforma privada · Plex</span>
+      <div class="brand-title">NENETFLIX</div>
+    </div>
+
+    <nav class="quick">
+      <a class="btn btn-ghost" href="#guia" title="Ir a la guía">Guía</a>
+      <a class="btn btn-ghost" href="#catalogo" title="Ver contenido">Contenido</a>
+      <a class="btn btn-primary" href="https://peticiones.nenetflix.uk/" target="_blank" rel="noreferrer">PETICIONES</a>
+      <a class="btn btn-whatsapp" href="https://wa.me/34605500259?text=Hola%20NENETFLIX%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio." target="_blank" rel="noreferrer">
+        <img alt="" src="assets/whatsapp.svg" />
+        WhatsApp
+      </a>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-card">
+      <div class="drawer-head">
+        <div class="drawer-title">Atajos</div>
+        <button class="drawer-close" id="drawerClose" aria-label="Cerrar">✕</button>
+      </div>
+      <div class="drawer-actions">
+        <a class="btn btn-primary w100" href="https://peticiones.nenetflix.uk/" target="_blank" rel="noreferrer">PETICIONES</a>
+        <a class="btn btn-whatsapp w100" href="https://wa.me/34605500259?text=Hola%20NENETFLIX%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio." target="_blank" rel="noreferrer">
+          <img alt="" src="assets/whatsapp.svg" />
+          WhatsApp · Más info
+        </a>
+        <a class="btn btn-ghost w100" href="#guia">Ir a la guía</a>
+      </div>
+      <div class="drawer-note">
+        Consejo: esta guía está pensada para verla desde WhatsApp. Solo desliza hacia abajo.
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-copy centered">
+          <h1>Tu streaming privado<br><span class="accent">tipo Netflix</span> en Plex</h1>
+          <p class="hero-lead">
+            Acceso a un catálogo enorme y en crecimiento, con <strong>2 pantallas simultáneas</strong>.
+            Configuración simple: <strong>no te registras</strong>, nosotros creamos tu cuenta.
+          </p>
+
+          <div class="hero-divider" aria-hidden="true"></div>
+
+          <div class="trustbar reveal" aria-label="Confianza">
+            <div class="trust-item">🔒 Plataforma privada</div>
+            <div class="trust-item">👤 Acceso manual</div>
+            <div class="trust-item">🚫 Sin pagos automáticos</div>
+          </div>
+
+
+          <div class="price-card">
+            <div class="price">
+              <div class="price-num">50 €</div>
+              <div class="price-sub">al año</div>
+            </div>
+            <div class="badges">
+              <span class="badge">2 pantallas simultáneas</span>
+              <span class="badge">Catálogo en crecimiento</span>
+              <span class="badge">Peticiones incluidas 📝</span>
+            </div>
+          </div>
+<div class="qs-steps">
+              <div class="qs-step"><span class="qs-n">1</span><span></span></div>
+              <div class="qs-step"><span class="qs-n">2</span><span></span></div>
+              <div class="qs-step"><span class="qs-n">3</span><span></span></div>
+            </div>
+          </div>
+
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#guia">Ver guía</a>
+            <a class="btn btn-ghost" href="#faq">Dudas rápidas</a>
+          </div>
+
+          <div class="tip">
+            <span class="tip-pill">TIP</span>
+            En móviles, usa <strong>app.plex.tv</strong> desde el navegador (Chrome/Safari) para evitar Plex Pass.
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-hint">
+        <span class="dot"></span> Desliza para ver la guía completa
+      </div>
+    </section>
+
+    <!-- CONTENT (based on PDF, but "vitaminado") -->
+    <section class="section" id="catalogo">
+      <div class="section-head">
+        <h2>¿Qué incluye NENETFLIX?</h2>
+        <p>🍿 Películas, 📺 series, 🌀 anime, 🎥 documentales y ⭐ estrenos. Si no está… lo pides.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <h3>Catálogo inmenso 🎞️</h3>
+          <p>Películas (de cualquier plataforma), series, anime, dibujos animados y más.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Sin líos 😌</h3>
+          <p>Solo dinos tu correo. Creamos la cuenta, la vinculamos y listo.</p>
+        </article>
+        <article class="card reveal">
+          <h3>En todos tus dispositivos</h3>
+          <p>PC, móvil (navegador), Smart TV (app Plex). Si tu TV no lo permite, Fire TV recomendado.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="guia">
+      <div class="section-head">
+        <h2>Guía</h2>
+        
+        </div>
+      </div>
+
+      <div class="pdf-grid">
+        <!-- Filled by JS (pages) -->
+      </div>
+    </section>
+
+    <!-- FAQ / Quick help -->
+    <section class="section" id="faq">
+      <div class="section-head">
+        <h2>Dudas rápidas</h2>
+        <p>Lo más importante para evitar problemas de idioma/calidad.</p>
+      </div>
+
+      <div class="accordion">
+        <details class="reveal">
+          <summary>📺 Inicio de sesión en TV (con el móvil)</summary>
+          <div class="details-body">
+            Abre Plex en tu TV → <strong>Sign in</strong> → te sale un código → desde el móvil entra en <strong>plex.tv/link</strong> e introduce el código.
+          </div>
+        </details>
+        <details class="reveal">
+          <summary>🧹 Limpieza del menú al primer inicio</summary>
+          <div class="details-body">
+            En el primer inicio, desmarca el contenido “de Plex” que viene por defecto y deja solo NENETFLIX.
+            Luego ordena el menú (1–12) a tu gusto.
+          </div>
+        </details>
+        <details class="reveal">
+          <summary>🎞️ Calidad e idioma</summary>
+          <div class="details-body">
+            En el reproductor, deja <strong>Calidad: Original / Máxima</strong>. Si notas cortes, cambia a <strong>Automática</strong>.
+            Para idioma/subtítulos: abre los ajustes del reproductor y selecciona <strong>Español</strong>.
+          </div>
+        </details>
+        <details class="reveal">
+          <summary>📝 ¿Cómo pido películas o series?</summary>
+          <div class="details-body">
+            Entra en <strong>peticiones.nenetflix.uk</strong>, inicia sesión con tu cuenta Plex y solicita lo que quieras.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section footer">
+      <div class="footer-card reveal">
+        <div>
+          <h2>¿Listo para empezar?</h2>
+          <p>Si quieres más info o activar tu acceso, escríbenos por WhatsApp.</p>
+        </div>
+        <div class="footer-actions">
+          <a class="btn btn-primary" href="https://peticiones.nenetflix.uk/" target="_blank" rel="noreferrer">PETICIONES</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/34605500259?text=Hola%20NENETFLIX%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio." target="_blank" rel="noreferrer">
+            <img alt="" src="assets/whatsapp.svg" />
+            WhatsApp · Más info
+          </a>
+        </div>
+      </div>
+      <div class="footer-mini">© NENETFLIX · Guía de uso</div>
+    </section>
+  
+<div id="stickyWhatsApp" class="sticky-wa">
+  <a href="https://wa.me/34605500259?text=Hola%20NENETFLIX%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noreferrer" class="sticky-wa-btn">
+    💬 Más info por WhatsApp
+  </a>
+</div>
+</main>
+
+
+
+  <div class="fab" aria-label="Accesos rápidos">
+    <a class="fab-btn fab-wa" href="https://wa.me/34605500259?text=Hola%20NENETFLIX%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20servicio." target="_blank" rel="noreferrer" aria-label="WhatsApp">
+      <img alt="" src="assets/whatsapp.svg" />
+    </a>
+    <a class="fab-btn fab-pet" href="https://peticiones.nenetflix.uk/" target="_blank" rel="noreferrer" aria-label="Peticiones">🎬</a>
+  </div>
+
+
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+    <img id="lightboxImg" alt="Guía ampliada" />
+
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">‹</button>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Siguiente">›</button>
+
+  </div>
+
+  <button class="to-top" id="toTop" aria-label="Volver arriba">↑</button>
+
+  <script>
+    // Provide page images to JS
+    window.NENETFLIX_PAGES = [
+      "assets/page-01.png","assets/page-02.png","assets/page-03.png","assets/page-04.png","assets/page-05.png",
+      "assets/page-06.png","assets/page-07.png","assets/page-08.png","assets/page-09.png"];
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
